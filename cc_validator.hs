@@ -1,7 +1,7 @@
 import Data.Char
 
-toDigits num = [digitToInt x | x <- show num]
+toDigits num = [digitToInt digit | digit <- show num]
 
-toDigitsRev num = [digitToInt x | x <- reverse (show num)]
+toDigitsRev num = [digitToInt digit | digit <- reverse (show num)]
 
-doubleEveryOther arr = [if y `mod` 2 == 0 then x * 2 else x| (x, y) <- zip arr [1..]]
+doubleEveryOther arr = [if i `mod` 2 == 0 then num * 2 else num | (num, i) <- zip arr [1..]]
