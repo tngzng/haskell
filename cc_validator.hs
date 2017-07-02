@@ -1,7 +1,11 @@
 import Data.Char
 
-toDigits num = [digitToInt digit | digit <- show num]
+toDigits x = [digitToInt char | char <- show x]
 
-toDigitsRev num = [digitToInt digit | digit <- reverse (show num)]
+toDigitsRev x = [digitToInt char | char <- reverse (show x)]
 
-doubleEveryOther arr = [if i `mod` 2 == 0 then num * 2 else num | (num, i) <- zip arr [1..]]
+doubleEveryOther xs = [if i `mod` 2 == 0 then x * 2 else x | (x, i) <- zip xs [1..]]
+
+sumDigit x = sum (toDigits x)
+
+sumDigits xs = sum [sumDigit x | x <- xs]
