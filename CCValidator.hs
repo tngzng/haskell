@@ -1,3 +1,12 @@
+module CCValidator  
+( toDigits
+, toDigitsRev  
+, doubleEveryOther 
+, sumDigit
+, sumDigits  
+, validate  
+) where  
+
 import Data.Char
 
 toDigits x = [digitToInt char | char <- show x]
